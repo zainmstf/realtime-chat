@@ -70,15 +70,6 @@ body {
   margin-bottom: 10px;
 }
 
-.form form .field span {
-  position: absolute;
-  right: 15px;
-  top: 70%;
-  color: #ccc;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
 .form form .input input {
   outline: none;
 }
@@ -122,3 +113,11 @@ body {
 }
 
 /* Sign in CSS */
+.form form .field span {
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
