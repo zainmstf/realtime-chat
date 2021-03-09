@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Realtime Chat</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" />
-</head>
+<?php include_once "header.php"; ?>
 
 <body>
   <div class="wrapper">
     <section class="form login">
       <header>Realtime Chat App</header>
       <form action="#">
-        <div class="error-txt">Ini adalah pesan error !</div>
+        <div class="error-txt"></div>
         <div class="field input">
-          <label for="alamat_email">Alamat email</label>
-          <input type="email" id="alamat_email" placeholder="Alamat email" />
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" />
         </div>
         <div class="field input">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Masukkan password" />
+          <input type="password" id="password" name="password" placeholder="Enter password" />
           <i class="fas fa-eye"></i>
         </div>
         <div class="field button">
-          <input type="submit" id="submit" value="Lanjut untuk chat" />
+          <input type="submit" id="submit" value="Continue for chat" />
         </div>
       </form>
       <div class="link">
-        Belum mempunyai akun ? <a href="index.php">Daftar sekarang</a>
+        Don't have an account ? <a href="index.php">Sign up Now</a>
       </div>
     </section>
   </div>
   <script src="javascript/pass-show-hide.js"></script>
+  <script src="javascript/login.js"></script>
 </body>
 
 </html>
