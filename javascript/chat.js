@@ -15,11 +15,20 @@ sendBtn.onclick = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 inputField.value = "";
+                scrollToBottom();
             }
         }
     }
     let formData = new FormData(form); // Membuat formdata object
     xhr.send(formData); // Mengirim data form kedalam php
+}
+
+chatBox.onmouseenter = () => {
+    chatBox.classList.add('active');
+}
+
+chatBox.onmouseleave = () => {
+    chatBox.classList.remove('active');
 }
 
 setInterval(() => {
@@ -30,9 +39,16 @@ setInterval(() => {
             if (xhr.status === 200) {
                 let data = xhr.response;
                 chatBox.innerHTML = data;
+                if (!chatBox.classList.contains('active')) {
+                    scrollToBottom();
+                }
             }
         }
     }
     let formData = new FormData(form); // Membuat formdata object
     xhr.send(formData); // Mengirim data form kedalam php
 }, 500); //function ini akan berjalan setelah 500ms
+
+function scrollToBottom() {
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
