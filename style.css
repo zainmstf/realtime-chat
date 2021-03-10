@@ -291,6 +291,7 @@ body {
 }
 
 .chat-area .typing-area input {
+  padding: 0 15px;
   height: 45px;
   width: calc(100% - 58px);
   font-size: 17px;
