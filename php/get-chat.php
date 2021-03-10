@@ -31,5 +31,5 @@ if (isset($_SESSION['unique_id'])) {
         echo $output;
     }
 } else {
-    header("../login.php");
+    header("../index");
 }
